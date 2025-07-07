@@ -1,0 +1,153 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(10, 10, 25, 0.8);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.header-container {
+  max-width: 1300px;
+  margin: auto;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo */
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #00ffff;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.logo:hover {
+  color: #ffffff;
+}
+
+/* Nav links */
+.nav {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1rem;
+  position: relative;
+  padding: 5px 0;
+  transition: color 0.3s ease;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: #00ffff;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+  color: #00ffff;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Menu Toggle */
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  z-index: 2000;
+}
+
+.menu-toggle .bar {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background: #ffffff;
+  border-radius: 2px;
+  position: relative;
+  transition: 0.4s;
+}
+
+.menu-toggle .bar::before,
+.menu-toggle .bar::after {
+  content: "";
+  position: absolute;
+  width: 28px;
+  height: 3px;
+  background: #ffffff;
+  border-radius: 2px;
+  transition: 0.4s;
+}
+
+.menu-toggle .bar::before {
+  top: -8px;
+}
+
+.menu-toggle .bar::after {
+  bottom: -8px;
+}
+
+.menu-toggle .bar.open {
+  background: transparent;
+}
+
+.menu-toggle .bar.open::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+.menu-toggle .bar.open::after {
+  transform: rotate(-45deg);
+  bottom: 0;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .nav {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(0, 0, 20, 0.95);
+    backdrop-filter: blur(15px);
+    padding: 20px 0;
+    gap: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px);
+    transition: 0.4s ease;
+  }
+
+  .nav.nav-open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
