@@ -23,13 +23,14 @@ const Footer = () => {
             <li><Link to="/career">Career</Link></li>
             <li><Link to="/blogs">Blogs</Link></li>
             <li><Link to="/contact">Contact</Link></li>
+            <li><Link to="/Technologies">Technologies</Link></li>
           </ul>
         </div>
 
         <div className="footer-section contact">
           <h3>Contact</h3>
           <p>Email: contact@amsa.com</p>
-          <p>Phone: +91 7218072175</p>
+          <p>Phone: ‪+91 7218072175‬</p>
           <div className="social-icons">
             <a href="#"><FaFacebookF /></a>
             <a href="#"><FaTwitter /></a>
@@ -46,4 +47,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default Footer;

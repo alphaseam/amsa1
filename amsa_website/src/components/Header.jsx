@@ -23,6 +23,7 @@ const Header = () => {
           <Link to="/career" className="nav-link">Career</Link>
           <Link to="/blogs" className="nav-link">Blogs</Link>
           <Link to="/contact" className="nav-link">Contact</Link>
+          <Link to="/Technologies" className="nav-link">Technologies</Link>
         </nav>
 
         <div className="menu-toggle" onClick={toggleMenu}>

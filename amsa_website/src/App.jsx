@@ -10,6 +10,7 @@ import Services from "./Pages/Services";
 import Career from "./Pages/Career";
 import Blogs from "./Pages/Blogs";
 import Contact from "./Pages/Contact";
+import Technologies from "./Pages/Technologies"; 
 
 const App = () => {
   return (
@@ -24,6 +25,8 @@ const App = () => {
           <Route path="/career" element={<Career />} />
           <Route path="/blogs" element={<Blogs />} />
           <Route path="/contact" element={<Contact />} />
+          
+          <Route path="/technologies" element={<Technologies />} />
         </Routes>
       </main>
 
@@ -32,4 +35,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default App;

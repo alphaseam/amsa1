@@ -1,4 +1,3 @@
-/* Reset */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -10,9 +9,9 @@
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: rgba(10, 10, 25, 0.8);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid #e0e0e0;
   transition: all 0.3s ease-in-out;
 }
 
@@ -25,27 +24,26 @@
   align-items: center;
 }
 
-/* Logo */
 .logo {
   font-size: 2rem;
   font-weight: bold;
-  color: #00ffff;
+  color: #4A0072;
   text-decoration: none;
   transition: 0.3s ease;
 }
 
 .logo:hover {
-  color: #ffffff;
+  color: #6a00a8;
 }
 
-/* Nav links */
 .nav {
   display: flex;
   gap: 30px;
+  transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
 .nav-link {
-  color: #ffffff;
+  color: #333333;
   text-decoration: none;
   font-size: 1rem;
   position: relative;
@@ -60,19 +58,19 @@
   bottom: -4px;
   width: 0%;
   height: 2px;
-  background: #00ffff;
+  background: #ff9900;
   transition: width 0.3s ease-in-out;
 }
 
 .nav-link:hover {
-  color: #00ffff;
+  color: #ff9900;
 }
 
 .nav-link:hover::after {
   width: 100%;
 }
 
-/* Menu Toggle */
+/* Hamburger Menu */
 .menu-toggle {
   display: none;
   cursor: pointer;
@@ -83,7 +81,7 @@
   display: block;
   width: 28px;
   height: 3px;
-  background: #ffffff;
+  background: #333333;
   border-radius: 2px;
   position: relative;
   transition: 0.4s;
@@ -95,7 +93,7 @@
   position: absolute;
   width: 28px;
   height: 3px;
-  background: #ffffff;
+  background: #333333;
   border-radius: 2px;
   transition: 0.4s;
 }
@@ -108,21 +106,22 @@
   bottom: -8px;
 }
 
-.menu-toggle .bar.open {
+/* Active hamburger state */
+.menu-toggle.open .bar {
   background: transparent;
 }
 
-.menu-toggle .bar.open::before {
+.menu-toggle.open .bar::before {
   transform: rotate(45deg);
   top: 0;
 }
 
-.menu-toggle .bar.open::after {
+.menu-toggle.open .bar::after {
   transform: rotate(-45deg);
   bottom: 0;
 }
 
-/* Mobile Styles */
+/* Responsive Nav */
 @media (max-width: 768px) {
   .nav {
     position: absolute;
@@ -131,14 +130,15 @@
     width: 100%;
     flex-direction: column;
     align-items: center;
-    background: rgba(0, 0, 20, 0.95);
-    backdrop-filter: blur(15px);
+    background: #ffffff;
     padding: 20px 0;
     gap: 20px;
     opacity: 0;
     visibility: hidden;
     transform: translateY(-20px);
-    transition: 0.4s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
   }
 
   .nav.nav-open {
@@ -149,5 +149,9 @@
 
   .menu-toggle {
     display: block;
+  }
+
+  .nav .nav-link {
+    color: #333333;
   }
 }
