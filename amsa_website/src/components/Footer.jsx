@@ -30,7 +30,7 @@ const Footer = () => {
         <div className="footer-section contact">
           <h3>Contact</h3>
           <p>Email: contact@amsa.com</p>
-          <p>Phone: ‪+91 7218072175‬</p>
+          <p>Phone: ‪+91 *********</p>
           <div className="social-icons">
             <a href="#"><FaFacebookF /></a>
             <a href="#"><FaTwitter /></a>
