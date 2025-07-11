@@ -5,6 +5,7 @@ import teamImage from '../assets/home/team-meeting.png';
 import smartImage from '../assets/home/home1.jpg';
 import chipImage from '../assets/home/home2.jpg';
 import Chart from '../assets/home/home3.jpg';
+import { Helmet } from 'react-helmet';
 import { FaLaptopCode, FaCloud, FaShieldAlt, FaBrain, FaCheckCircle, FaRocket, FaBookOpen, FaSeedling } from 'react-icons/fa';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -18,6 +19,14 @@ const Home = () => {
 
   return (
     <>
+      <Helmet>
+        <title>AMSA Digital Transformation with SAP Expertise</title>
+        <meta
+          name="description"
+          content="Discover AMSA Enterprise – your trusted IT partner for SAP-powered ERP solutions, digital transformation, and enterprise software development."
+        />
+      </Helmet>
+      
       <section className="hero-section">
         <div className="hero-content">
           <div className="hero-text">
@@ -26,7 +35,7 @@ const Home = () => {
               Stronger Growth.
             </h1>
             <p>
-              Amsa delivers cutting-edge digital solutions to help businesses innovate, grow, and stay secure.
+              <b>Amsa</b> delivers cutting-edge digital solutions to help businesses innovate, grow, and stay secure.
               From development to AI and cloud services, we empower smarter operations and seamless digital transformation.
             </p>
             <div className="hero-buttons">
@@ -108,7 +117,7 @@ const Home = () => {
         <div className="split-right">
           <h2>Smart Tech. Fair Access.</h2>
           <p>
-            Amsa empowers growing businesses with enterprise-grade solutions—without the enterprise price tag.
+            <b>Amsa</b> empowers growing businesses with enterprise-grade solutions—without the enterprise price tag.
             Our services make advanced technologies like AI, cloud, and cybersecurity accessible to startups, small teams,
             and non-technical founders.
           </p>
@@ -141,18 +150,18 @@ const Home = () => {
           <div className="banner-right">
             <h2>Scalable Solutions<br />That Grow With You</h2>
             <p>
-              ThinkStratums delivers flexible digital services that evolve with your business.
+              <b>Asma</b> delivers flexible digital services that evolve with your business.
               Whether you're scaling your app, securing your data, or expanding your digital reach,
               our solutions adapt to meet your changing needs — without disruption.
             </p>
 
-            <div className="stats-row">
-              <div className="stat-box">
-                <span className="stat-number">88%</span>
+            <div className="sta-row">
+              <div className="sta-box">
+                <span className="sta-number">88%</span>
                 <p>Clients improved project delivery speed</p>
               </div>
-              <div className="stat-box">
-                <span className="stat-number">70%</span>
+              <div className="sta-box">
+                <span className="sta-number">70%</span>
                 <p>Reduced IT and infrastructure overhead</p>
               </div>
             </div>
